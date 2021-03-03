@@ -1,38 +1,823 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.row {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #fff;
+  color: rgb(54, 54, 54);
+  font-family: 'Lato', 'Arial', 'sans-serif';
+  font-weight: 300;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Headers */
+h1, 
+h2,
+h3,
+h4 {
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+h2 {
+  font-size: 180%;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+}
+
+h3 {
+  word-spacing: 5px;
+}
+
+h4 {
+  font-size: 105%;
+}
+
+h5 {
+  font-weight: 300;
+}
+/* ------------------- */
+/* PARAGRAPHS */
+/* ------------------- */
+
+.long-copy {
+  line-height: 145%;
   text-align: center;
+  margin-top: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* ICONS */
+.icon-big {
+  font-size: 250%;
+  display: block;
+  color: #3498db;
+  margin-bottom: 10px;
+  margin-top: 40px;
+
+}
+/* BUTTONS */
+
+.login-btn {
+  text-align: center;
+  cursor: pointer;
+  background: #3498db;
+  border: 2px solid #2487c9;
+  padding: 10px 30px;
+  display: block;
+  border-radius: 100vh;
+  margin: 30px auto;
+  width: 30%;
+  color: white;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+.login-btn:hover,
+.login-btn:active {
+  background: #2377af;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.btn {
+  text-align: center;
+  margin-top: 2em;
+  margin-right: 25px;
+  cursor: pointer;
+  width: 10em; 
+  background: #3498db;
+  border: 1px solid #2487c9;
+  color: #fff;
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 100vh;
+  color: #fff;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.btn-full:hover,
+.btn-full:active
+ {
+  background: #2377af;
+}
+
+.btn-ghost {
+  background-color: transparent;
+  color: #3498db;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active
+ {
+  background: #2377af;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.btn-small {
+  position: absolute;
+  text-align: center;
+  right: 8%;
+  top: 80%;
+  cursor: pointer;
+  width: 6em; 
+  background: #3498db;
+  border: 1px solid #2487c9;
+  color: #fff;
+  display: inline-block;
+  padding: 5px 15px;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 100vh;
+  color: #fff;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.comment-btn {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  cursor: pointer;
+  width: 10em; 
+  background: #3498db;
+  border: 1px solid #2487c9;
+  color: #fff;
+  display: inline-block;
+  padding: 5px 15px;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 100vh;
+  color: #fff;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+/* Navbar Css */
+.logo {
+  float: left;
+  margin-top: 8px;
+  font-size: 130%;
+  word-spacing: 4px;
+  letter-spacing: 1px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: white;
+}
+
+
+.main-nav {
+  float: right;
+  list-style: none;
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 0.65);
+  height: 6vh;
+  /* border-bottom: 1px solid black; */
+}
+
+.main-nav li {
+  margin-top: 15px;
+  display: inline-block;
+  margin-left: 50px;
+  /* margin-top: 10px; */
+}
+
+.main-nav li a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 90%;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.2s;
+  padding: 6px 0;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+  border-bottom: 2px solid #3498db;
+
+}
+
+/* end navbar css */
+
+/* Footer CSS */
+footer {
+  background-color: #333333;
+  padding: 50px;
+  height: auto;
+  left: 0;
+  bottom: 0;
+
+}
+
+.footer-nav {
+  list-style: none;
+  float: left;
+}
+
+.footer-nav li {
+  display: inline-block;
+  margin-right: 25px;
+}
+.footer-nav li a {
+  text-decoration: none;
+  border: 0;
+  color: #888;
+  transition: color 0.2s;
+}
+
+.footer-nav li a:active,
+.footer-nav li a:hover {
+color: white;
+}
+
+/* Home Banner CSS */
+
+.banner-div{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(hero.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 94vh;
+  /* margin-top: -19px; */
+}
+
+.banner-info {
+  position: absolute;
+  width: 1140px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+/* How it Works Section */
+
+.how-it-works h2 {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.box h3 {
+  margin-bottom: 20px;
+}
+
+.how-it-works h2:after {
+  display: block;
+  height: 2px;
+  background-color: #2487c9;
+  content: ' ';
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+
+/* Featured Courses Section */
+
+.featured-courses {
+  margin-top: 80px;
+  background-color: rgb(245, 245, 245);
+  padding: 50px;
+}
+
+.homebanner1-holder {
+  width: 450px;
+  height: 280px;
+  border-radius: 10px;
+  background-color: lightblue;
+  position: relative;
+  margin-bottom: 80px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.homebanner1 {
+  background-image: url(homebanner1.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  width: 450px;
+  height: 280px;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.homebanner2-holder {
+  width: 450px;
+  height: 280px;
+  border-radius: 10px;
+  background-color: rgba(100, 173, 170, 0.644);
+  position: relative;
+  margin-left: 50px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.homebanner2 {
+  background-image: url(homebanner2.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  width: 450px;
+  height: 280px;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+.box button {
+  margin-top: 40px;
+}
+
+/* Featured Companies Section */
+
+.featured-companies h2 {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.featured-companies h2:after {
+  display: block;
+  height: 2px;
+  background-color: #2487c9;
+  content: ' ';
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 80px;
+}
+
+.featured-companies {
+  margin-bottom: 60px;
+}
+
+/* business index CSS */
+
+.business-card {
+  color: black;
+  text-align: center;
+}
+
+.bus-logo {
+  width: 35%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  /* margin-top: 10px; */
+  border-color: darkgray;
+}
+
+.business-card h3 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.courses-index {
+  min-height: 100vh;
+}
+/* Filter CSS */
+
+.filter {
+  text-align:center;
+  /* background-color: rgb(241, 241, 241); */
+  background-image: url("https://images.unsplash.com/photo-1506765515384-028b60a970df?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1498&q=80");
+  background-position: center;
+  background-size: cover;
+}
+
+.category1 {
+  width: 80%;
+  margin: 50px auto;
+  height: auto;
+  border-radius: 10px;
+  display: inline-block;
+  color: white;
+}
+
+.box label {
+  margin-right: 20px;
+}
+
+.box select {
+  padding: 8px 10px 8px 20px;
+  border-radius: 15px;
+  width: 250px;
+}
+
+.filter h2 {
+  color: rgb(39, 39, 39);
+  margin-top: 20px;
+  text-align: center;
+}
+
+.filter h2:after {
+  display: block;
+  height: 2px;
+  background-color: #2487c9;
+  content: ' ';
+  width: 300px;
+  margin: 30px auto;
+
+  
+}
+/* Search CSS */
+
+  #searchInput {
+    font-family: "Lato";
+    width: 300px;
+    margin-left: 10px;
+    border: 1px solid rgb(160, 160, 160);
+    border-radius: 30px;
+    background-color: white;
+    background-image:url('https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/search-24.png');
+    background-position: 10px 5px;
+    background-repeat: no-repeat;
+    padding: 8px 10px 8px 20px;
+    -webkit-transition: width 0.8s ease-in-out;
+    transition: width 0.8s ease-in-out;
+    outline: none;
+    opacity: 0.9;
+    text-indent: 20px;
+  
   }
-  to {
-    transform: rotate(360deg);
-  }
+/* Course index CSS */
+
+.course-index {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.course-image-holder {
+  margin-top: 20px;
+}
+
+.course-cover {
+width: 15%;
+box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+margin-left: 40px;
+}
+
+.course-image {
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  width: 10%;
+  height: 120px;
+  position: absolute;
+  left: 130px;
+  top: 45px;
+}
+
+.course-info {
+  margin-left: 300px;
+  /* height: 0; */
+  text-decoration: none;
+  color: black;
+  position: absolute;
+  top: 80px;
+  
+}
+
+.course-info h5 {
+  font-weight: 400;
+
+}
+.course-info p {
+  font-size: 70%;
+  margin-top: 5px;
+}
+
+.course-btn-holder {
+  margin-left: 850px;
+  margin-top: -70px;
+}
+.course-index hr {
+  margin-top: 60px;
+}
+.courses-index hr:last-of-type {
+  display: none;
+}
+
+.image-container {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgb(220, 220, 220);
+  border-radius: 15px;
+  width: 55%;
+  background-color: rgb(245, 245, 245);
+  margin-top: 20px;
+  margin-left: 12%;
+  position: relative;
+
+  
+}
+.cover-photo {
+  width: 100%;
+  height: 200px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+
+}
+
+.avatar {
+  box-shadow: 0 0 .1em rgba(0, 0, 0, 0.35);
+  position: absolute;
+  left: 8%;
+  top: 45%;
+  background: #fff;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+}
+
+.quick-info {
+  margin-top: 10px;
+  padding-bottom: 20px;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 50%;
+}
+
+.quick-info p {
+  margin-top: 10px;
+  font-size: 80%;
+}
+
+.about-description {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgb(220, 220, 220);
+  border-radius: 15px;
+  width: 55%;
+  background-color: rgb(245, 245, 245);
+  margin-top: 30px;
+  /* margin-left: 150px; */
+  margin-left: 12%;
+}
+
+.about-description h4,
+.about-description p {
+  margin: 10px 40px;
+}
+.about-description p {
+  font-size: 75%;
+}
+.about-description h4::after{
+  display: block;
+  height: 2px;
+  background-color: #2487c9;
+  content: ' ';
+  width: 80px;
+  margin-top: 10px;
+}
+
+.main-info-container {
+  width: 76%;
+  margin: 0 auto;
+  background-color: rgb(245, 245, 245);
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+  border: 1px solid rgb(220, 220, 220);
+  min-height: 100px;
+  margin-bottom: 100px;
+}
+
+.toggle-text {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  cursor: pointer;
+  color: white;
+  text-align: center;
+  background-color: rgb(71, 71, 71);
+}
+.main-info-container li {
+  border-right: 2px solid #2487c9;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.main-info-container li:last-of-type {
+  border-right: none;
+}
+
+.main-info-container li:hover,
+.main-info-container li:active {
+  color: #65b8f0;
+
+}
+
+.user-intro {
+  text-align: center;
+  font-weight: 400;
+}
+
+.bump {
+  margin-top: 30px;
+}
+
+/* for business job description */
+.description-profile {
+font-size: 80%;
+padding: 10px;
+margin: 10px;
+}
+.rounder {
+  height: 40px;
+}
+
+/* Comment CSS */
+.comment-form {
+  font-family: 'Lato', 'Arial', 'sans-serif';
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.comment-box {
+  font-family: 'Lato', 'Arial', 'sans-serif';
+  width: 70%;
+  height: 50px;
+}
+
+.comment-content {
+  background-color: white;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  border: 1px solid rgb(220, 220, 220);
+  padding: 10px 30px;
+  font-size: 80%
+}
+
+/* Index */
+
+.other-elements{
+  width: 275px;
+  position: absolute;
+  right: 12%;
+  background-color: rgb(245, 245, 245);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  border: 1px solid rgb(220, 220, 220);
+}
+
+/* displays similar elements on show page.  Ex: similar courses on a course page and other users on a user show page */
+.other-elements h4{
+  margin-top: 10px;
+  text-align: center;
+}
+
+.other-elements h4::after{
+  margin: 0 auto;
+  display: block;
+  height: 2px;
+  background-color: #2487c9;
+  content: ' ';
+  width: 80px;
+  margin-top: 10px;
+}
+
+.index-container {
+  margin: 20px;
+}
+
+#profsmall{
+width: 55px;
+height: 55px;
+border-radius: 50%;
+box-shadow: 0 0 .1em rgba(0, 0, 0, 0.35);
+}
+
+.index-info {
+  font-size: 90%;
+  color: black;
+  text-decoration: none;
+  max-width: 200px;
+  cursor: pointer;
+
+}
+.index-info h5 {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.index-info p {
+  font-size: 70%;
+  margin-left: 20px;
+  margin-top: -15px;
+  /* margin-bottom: 10px; */
+}
+
+.index-info:hover,
+.index-info:active
+{
+  color: #2487c9;
+}
+
+/* other elements for course */
+.index-info-course {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+.index-info-course:hover,
+.index-info-course:active {
+  color: #2487c9;
+}
+.index-info-course h5 {
+  margin-top: 10px;
+  margin-left: 10px;
+  max-width: 200px;
+}
+
+/* BUSINESS CARD CSS, INDEX VIEW */
+
+.business-index {
+  margin-top: 50px;
+  min-height: 100vh;
+}
+
+/* Login CSS */
+
+.background-login {
+background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(hero.jpg);
+background-size: cover;
+background-position: center;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+height: 94vh;
+}
+
+.form-container {
+  margin: auto 0;
+  width: 30%;
+  background: rgb(54, 54, 54, 0.4);
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.2);
+  font-weight: 400;
+}
+
+.form-container input {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 15px;
+  width: 60%;
+  border: 1px solid rgb(56, 56, 56);
+}
+
+.switch {
+  cursor: pointer;
+  margin-bottom: 30px;
+  color: white;
+}
+
+
+/* Pagination CSS */
+.pagination {
+  margin: 15px auto;
+  display: flex;
+  list-style: none;
+  outline: none;
+}
+.pagination > .active > a{
+  background-color: #2487c9 ;
+  border-color: #2487c9 ;
+  color: #fff;
+}
+.pagination > li > a{
+  border: 1px solid #2487c9 ;
+  padding: 5px 10px;
+  outline: none;
+  cursor: pointer;
+}
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
+  background-color: #2487c9 ;
+  border-color: #2487c9;
+  outline: none ;
+}
+.pagination > li > a, .pagination > li > span{
+  color: #2487c9
+}
+.pagination > li:first-child > a, .pagination > li:first-child > span, .pagination > li:last-child > a, .pagination > li:last-child > span{
+  border-radius: unset
 }
